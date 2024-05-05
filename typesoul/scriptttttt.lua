@@ -832,33 +832,28 @@ do
 	end
 end
 -- // Main
-local window = library:Window({name = "<font color=\"#AA55EB\">elixer.sol</font> | Jul 7 2021"})
---
-local aimbot = window:Page({Name = "aimbot"})
-local antiaim = window:Page({Name = "antiaim"})
-local visuals = window:Page({Name = "visuals"})
+local window = library:Window({name = "<font color=\"#AA55EB\">Imperail</font> | 2024"})
+-- pages
+local main = window:Page({Name = "main"})
+local move = window:Page({Name = "movement"})
 local misc = window:Page({Name = "misc"})
 local config = window:Page({Name = "config"})
-local skins = window:Page({Name = "skins"})
+-- 
+local main_section = main:Section({Name = "players", size = 300})
+local main_section2 = main:Section({Name = "visuals", Side = "Right"})
 --
-local aimbot_section = aimbot:Section({Name = "players", size = 300})
-local aimbot_section2 = aimbot:Section({Name = "colored models", Side = "Right"})
+local label2 = main_section:Label({Name = "with none", Offset = 16})
+local toggle = main_section:Toggle({Name = "random toggle", Default = true, Callback = function(val) warn(val) end})
+local slider = main_section:Slider({Default = 0, Minimum = 0, Maximum = 100, Decimals = 10, Suffix = "%", Callback = function(val) warn(val) end})
+local button = main_section:Button({Name = "random button", Callback = function() warn("clicked") end})
+local slider = main_section:Slider({Name = "random slider", Callback = function(val) warn(val) end})
+local slider = main_section:Slider({Name = "random slider", Default = 10, Minimum = -10, Maximum = 30, Decimals = 10, Suffix = "%", Callback = function(val) warn(val) end})
+local toggle = main_section:Toggle({Name = "random toggle", Default = true, Callback = function(val) warn(val) end})
+local slider = main_section:Slider({Default = 10, Minimum = -10, Maximum = 30, Decimals = 10, Suffix = "%", Callback = function(val) warn(val) end})
+local button = main_section:Button({Name = "random button", Callback = function() warn("clicked") end})
+local slider = main_section:Slider({Name = "random slider", Callback = function(val) warn(val) end})
+local slider = main_section:Slider({Name = "random slider", Default = 10, Minimum = -10, Maximum = 30, Decimals = 10, Suffix = "%", Callback = function(val) warn(val) end})
 --
-local label = aimbot_section:Label({Name = "label hello random"})
-local label2 = aimbot_section:Label({Name = "with none", Offset = 16})
-local toggle = aimbot_section:Toggle({Name = "random toggle", Default = true, Callback = function(val) warn(val) end})
-local slider = aimbot_section:Slider({Default = 10, Minimum = -10, Maximum = 30, Decimals = 10, Suffix = "%", Callback = function(val) warn(val) end})
-local button = aimbot_section:Button({Name = "random button", Callback = function() warn("clicked") end})
-local slider = aimbot_section:Slider({Name = "random slider", Callback = function(val) warn(val) end})
-local slider = aimbot_section:Slider({Name = "random slider", Default = 10, Minimum = -10, Maximum = 30, Decimals = 10, Suffix = "%", Callback = function(val) warn(val) end})
-local label = aimbot_section:Label({Name = "label hello random"})
-local label2 = aimbot_section:Label({Name = "with none", Offset = 16})
-local toggle = aimbot_section:Toggle({Name = "random toggle", Default = true, Callback = function(val) warn(val) end})
-local slider = aimbot_section:Slider({Default = 10, Minimum = -10, Maximum = 30, Decimals = 10, Suffix = "%", Callback = function(val) warn(val) end})
-local button = aimbot_section:Button({Name = "random button", Callback = function() warn("clicked") end})
-local slider = aimbot_section:Slider({Name = "random slider", Callback = function(val) warn(val) end})
-local slider = aimbot_section:Slider({Name = "random slider", Default = 10, Minimum = -10, Maximum = 30, Decimals = 10, Suffix = "%", Callback = function(val) warn(val) end})
---
-aimbot:Turn(true)
+main:Turn(true)
 -- // Returning
 return library, utility, obelus
