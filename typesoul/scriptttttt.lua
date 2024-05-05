@@ -854,10 +854,10 @@ local button = main_section:Button({Name = "random button", Callback = function(
 local slider = main_section:Slider({Name = "random slider", Callback = function(val) warn(val) end})
 local slider = main_section:Slider({Name = "random slider", Default = 10, Minimum = -10, Maximum = 30, Decimals = 10, Suffix = "%", Callback = function(val) warn(val) end})
 --
-local toggle = main_section2:Toggle({Name = "Player Esp", Default = true, Callback = function(val) warn(val) end})
-local toggle = main_section2:Toggle({Name = "Firsker Esp", Default = true, Callback = function(val) warn(val) end})
-local toggle = main_section2:Toggle({Name = "Fishbone Esp", Default = true, Callback = function(val) warn(val) end})
-local toggle = main_section2:Toggle({Name = "Menos Esp", Default = true, Callback = function(val) warn(val) end})
+local toggle = main_section:Toggle({Name = "Player Esp", Side = "Right", Default = true, Callback = function(val) warn(val) end})
+local toggle = main_section:Toggle({Name = "Firsker Esp", Side = "Right", Default = true, Callback = function(val) warn(val) end})
+local toggle = main_section:Toggle({Name = "Fishbone Esp", Side = "Right", Default = true, Callback = function(val) warn(val) end})
+local toggle = main_section:Toggle({Name = "Menos Esp", Side = "Right", Default = true, Callback = function(val) warn(val) end})
 --
 main:Turn(true)
 -- // Returning
