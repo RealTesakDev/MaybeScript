@@ -844,7 +844,7 @@ local main_section2 = main:Section({Name = "visuals", Side = "Right"})
 --
 local label2 = main_section:Label({Name = "with none", Offset = 16})
 local toggle = main_section:Toggle({Name = "random toggle", Default = true, Callback = function(val) warn(val) end})
-local slider = main_section:Slider({Default = 0, Minimum = 0, Maximum = 100, Decimals = 10, Suffix = "%", Callback = function(val) warn(val) end})
+local slider = main_section:Slider({Default = 0, Minimum = 0, Maximum = 100, Decimals = 1, Suffix = "%", Callback = function(val) warn(val) end})
 local button = main_section:Button({Name = "random button", Callback = function() warn("clicked") end})
 local slider = main_section:Slider({Name = "random slider", Callback = function(val) warn(val) end})
 local slider = main_section:Slider({Name = "random slider", Default = 10, Minimum = -10, Maximum = 30, Decimals = 10, Suffix = "%", Callback = function(val) warn(val) end})
@@ -853,6 +853,11 @@ local slider = main_section:Slider({Default = 10, Minimum = -10, Maximum = 30, D
 local button = main_section:Button({Name = "random button", Callback = function() warn("clicked") end})
 local slider = main_section:Slider({Name = "random slider", Callback = function(val) warn(val) end})
 local slider = main_section:Slider({Name = "random slider", Default = 10, Minimum = -10, Maximum = 30, Decimals = 10, Suffix = "%", Callback = function(val) warn(val) end})
+--
+local toggle = main_section2:Toggle({Name = "Player Esp", Default = true, Callback = function(val) warn(val) end})
+local toggle = main_section2:Toggle({Name = "Firsker Esp", Default = true, Callback = function(val) warn(val) end})
+local toggle = main_section2:Toggle({Name = "Fishbone Esp", Default = true, Callback = function(val) warn(val) end})
+local toggle = main_section2:Toggle({Name = "Menos Esp", Default = true, Callback = function(val) warn(val) end})
 --
 main:Turn(true)
 -- // Returning
